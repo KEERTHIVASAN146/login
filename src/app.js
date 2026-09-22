@@ -120,7 +120,7 @@ app.post("/api/register", async (req, res, next) => {
             `INSERT INTO registrations
                (phantasm_id, college_name, contact_name, contact_email, contact_phone,
                 is_pass, needs_accommodation, total_amount, payment_status)
-             VALUES ($1,$2,$3,$4,$5,false,'no',0,'pending')
+             VALUES ($1,$2,$3,$4,$5,false,'no',0,'paid')
              RETURNING id`,
             [candidate, college, name, email, phone],
           );
