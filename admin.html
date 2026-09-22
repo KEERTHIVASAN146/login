@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Phantasm — Registrations Admin</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap" style="max-width:900px;">
+    <header class="hero">
+      <p class="eyebrow">Phantasm</p>
+      <h1>Registrations</h1>
+      <p class="sub">Enter the admin key to view and export stored participant details.</p>
+    </header>
+
+    <div class="admin-bar">
+      <input type="password" id="adminKey" placeholder="Admin key" />
+      <button id="loadBtn">Load</button>
+      <button id="exportBtn">Export CSV</button>
+    </div>
+
+    <p id="adminMsg" class="msg"></p>
+
+    <div style="overflow-x:auto;">
+      <table id="regTable" style="display:none;">
+        <thead>
+          <tr>
+            <th>Reg ID</th>
+            <th>Name</th>
+            <th>College</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Events</th>
+            <th>Registered</th>
+          </tr>
+        </thead>
+        <tbody id="regBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Phantasm — Participant Registration</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <p class="eyebrow">Phantasm</p>
+      <h1>Participant Registration</h1>
+      <p class="sub">Fill in your details below to register. Only your email is required — everything else helps us reach you and plan the events.</p>
+    </header>
+
+    <form id="regForm" class="card" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" />
+      </div>
+
+      <div class="field">
+        <label for="college">College</label>
+        <input type="text" id="college" name="college" placeholder="Your college / institution" autocomplete="organization" />
+      </div>
+
+      <div class="field">
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" autocomplete="tel" />
+      </div>
+
+      <div class="field">
+        <label>Events</label>
+        <p class="hint">Select any events you'd like to take part in.</p>
+        <div id="eventsList" class="events-grid"></div>
+      </div>
+
+      <button type="submit" id="submitBtn">Register</button>
+      <p id="formMsg" class="msg" role="status"></p>
+    </form>
+
+    <footer>
+      <p>Already registered? Contact the organizing team if you need to update your details.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

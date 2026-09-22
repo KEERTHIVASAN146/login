@@ -1,0 +1,26 @@
+{
+  "name": "phantasm-register-lite",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone participant registration site for Phantasm — shares the same PostgreSQL database/schema as the main Phantasm site. Deploys to Vercel (static frontend + serverless API).",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "node server.js",
+    "start:local": "node --watch server.js",
+    "migrate": "node src/migrate.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.19.2",
+    "nanoid": "^5.0.7",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "vercel": "^37.0.0"
+  }
+}
