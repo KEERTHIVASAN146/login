@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS registrations (
   is_pass               BOOLEAN NOT NULL DEFAULT false,
   needs_accommodation   TEXT NOT NULL DEFAULT 'no' CHECK (needs_accommodation IN ('yes', 'no')),
   total_amount          INTEGER NOT NULL DEFAULT 0,
-  payment_status        TEXT NOT NULL DEFAULT 'pending' CHECK (payment_status IN ('pending', 'paid', 'failed')),
+  payment_status        TEXT NOT NULL DEFAULT 'paid' CHECK (payment_status IN ('pending', 'paid', 'failed')),
   cashfree_order_id     TEXT UNIQUE,
   confirmation_email_sent_at TIMESTAMPTZ,
   created_at            TIMESTAMPTZ NOT NULL DEFAULT now(),
